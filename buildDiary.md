@@ -12,3 +12,13 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?tabs=visual
 
 * Debugging Setup (dotnet command):
 https://github.com/dotnet/runtime/issues/3603
+
+###
+
+Day 3 - July 14
+###
+
+After trying to work through a few tutorials on how to build a web api using ASP.NET and running into setup problems, I have switched to a PERN stack for my final project and am looking to build out the backend API and Auth this week. I'm still interested in working with ASP.NET (or C#) at some point, but that'll have to be more of a hobbyist application. I started up a trello board and am using that to keep me on track, I know that leaving room for ambiguity in what I need to accomplish is a great way to set myself up for failure. But I'm much more optimistic about how this project is going to go! I've built plenty of express apps before and I think I get get most of the main api knocked out today and tomorrow. Next step after that would be getting basic routing done and tackling auth. 
+
+
+

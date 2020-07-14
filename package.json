@@ -1,0 +1,19 @@
+{
+  "name": "theteardown",
+  "version": "1.0.0",
+  "description": "Platform to review apps and websites for privacy concerns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdutro002/theTeardown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdutro002/theTeardown/issues"
+  },
+  "homepage": "https://github.com/mdutro002/theTeardown#readme"
+}
