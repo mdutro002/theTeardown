@@ -17,6 +17,12 @@ app.get('/', (req, res) => {
 })
 
 //DB CONNECTION
+const pool = new Pool({ 
+  ssl: { rejectUnauthorized: false },
+  database: process.env.DBNAME
+})
+pool.connect();
+
 
 //LISTENER
 app.listen(PORT, () => {
