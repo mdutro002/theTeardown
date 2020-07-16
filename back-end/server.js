@@ -1,27 +1,36 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
-const {Pool} = require('pg');
-
-const PORT = process.env.PORT || 3333
-
+const {Pool, Client} = require('pg');
 
 //MIDDLEWARE
 app.set('views', __dirname + '/views');
+require('dotenv').config();
 
-//CONTROLLERS
-
-//ROUTES
-app.get('/', (req, res) => {
-  res.render('index')
-})
+const PORT = process.env.PORT || 3333
 
 //DB CONNECTION
 const pool = new Pool({ 
-  ssl: { rejectUnauthorized: false },
-  database: process.env.DBNAME
+  database: process.env.DBNAME,
+  user: process.env.DBUSER,
+  password: process.env.DBPASSWORD,
+  port: process.env.DBPORT
 })
-pool.connect();
+pool.connect((err, client, release) => {
+  if (err){
+    return console.error('Error acquiring client', err.stack)
+  }
+  client.query('SELECT NOW()', (err, result) => {
+    release()
+    if (err) {
+      return console.error('Error executing query', err.stack)
+    }
+    console.log(result.rows);
+  })
+});
+
+//API ROUTES
+
 
 
 //LISTENER
