@@ -39,7 +39,7 @@ pool.connect((err, client, release) => {
 });
 
 //API ROUTES
-
+//ROUTES - GET ALL REVIEWS
 app.get('/', (req, res) => {
   pool.query('SELECT * FROM reviews', (err, result) => {
     if (err){
@@ -49,6 +49,29 @@ app.get('/', (req, res) => {
     res.json(result.rows);
   })
 })
+
+//ROUTES - GET ALL CREATORS
+app.get('/creators', (req, res) => {
+  pool.query('SELECT * FROM creators', (err, result) => {
+    if (err){
+      console.log(err)
+      throw err
+    }
+    res.json(result.rows);
+  })
+})
+
+//ROUTES - CREATE REVIEW
+
+//ROUTES - CREATE CREATOR
+
+//ROUTES - UPDATE REVIEW
+
+//ROUTES - UPDATE CREATOR
+
+//ROUTES - DELETE REVIEW
+
+//ROUTES - DELETE CREATOR
 
 //LISTENER
 app.listen(PORT, () => {
