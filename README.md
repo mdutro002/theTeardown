@@ -1,7 +1,7 @@
 # theTeardown
 Platform to review apps and websites for privacy concerns
 
-Live Link: https://theteardown.herokuapp.com
+~~Live Link: https://theteardown.herokuapp.com~~
 
 
 
